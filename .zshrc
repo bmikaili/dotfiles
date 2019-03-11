@@ -4,6 +4,7 @@ export VISUAL=nvim
 export EDITOR="$VISUAL"
 export LANG=en_US.UTF-8
 export LC_CTYPE=en_US.UTF-8
+export FZF_DEFAULT_COMMAND='rg --files --no-ignore-vcs --hidden'
 
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 #ZSH_THEME="agnoster"
