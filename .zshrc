@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/by/.oh-my-zsh"
+export ZSH="./.oh-my-zsh"
 export VISUAL=nvim
 export EDITOR="$VISUAL"
 export LANG=en_US.UTF-8
@@ -75,7 +75,7 @@ prompt_context(){}
 # export ARCHFLAGS="-arch x86_64"
 
 # ssh
-# export SSH_KEY_PATH="~/.ssh/rsa_id"
+export SSH_KEY_PATH="~/.ssh/rsa_id"
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
@@ -91,7 +91,7 @@ alias vim="nvim"
 alias vi="nvim"
 alias ls="exa"
 alias la="exa -l"
-alias alacrity="vi ~/.config/alacritty/alacritty.yml"
+alias alacritty="vi ~/.config/alacritty/alacritty.yml"
 # This speeds up pasting w/ autosuggest
 # https://github.com/zsh-users/zsh-autosuggestions/issues/238
 pasteinit() {

@@ -1,3 +1,6 @@
+" My Personal Neovim Config
+
+" Plugins {{{
 call plug#begin('~/.local/share/nvim/plugged')
 
 Plug 'morhetz/gruvbox'
@@ -28,11 +31,14 @@ Plug 'tpope/vim-repeat'
 Plug 'terryma/vim-smooth-scroll'
 
 call plug#end()
+" }}}
 
-" ============== Defaults ==================
+" General configs {{{
 " Set numbers on left
 set nu
 
+" Fold Option marker
+set foldmethod=marker
 " Set locale
 language en_US
 
@@ -53,19 +59,19 @@ set shiftwidth=2    " Indents will have a width of 2
 set softtabstop=2   " Sets the number of columns for a TAB
 
 set expandtab       " Expand TABs to spaces
-" ============== Defaults ====================
+" }}}
 
-" ============= Clever-F =====================
+" Clever-F {{{
 let g:clever_f_across_no_line = 1
 let g:clever_f_fix_key_direction = 1
 let g:clever_f_timeout_ms = 3000
-" ============= Clever-F =====================
+" }}}
 
-" ============= Vim-Lion =====================
+" Vim-Lion {{{
 let g:lion_squeeze_spaces = 1
-" ============= Vim-Lion =====================
+" }}}
 
-" ============= Nerdtree =====================
+" NERDTree {{{
 " General config and remap
 let NERDTreeHijackNetrw = 0
 noremap <silent> <leader>n :NERDTreeToggle<CR> <C-w>=
@@ -83,14 +89,14 @@ autocmd BufEnter * call NERDTreeRefresh()
 " Nerdtree Git Plugin
 let g:NERDTreeUpdateOnCursorHold = 0
 let g:NERDTreeUpdateOnWrite      = 0
-" ============= Nerdtree ==================
+" }}}
 
-" ============= Airline ===================
+" Airline {{{
 " Airline config
 let g:airline_theme='gruvbox'
-" ============= Airline ===================
+" }}}
 
-" ============= Colorscheme ===============
+" Colorscheme {{{
 " Colorscheme Configs
 set termguicolors
 colorscheme gruvbox
@@ -101,9 +107,9 @@ if system("defaults read -g AppleInterfaceStyle") =~ '^Dark'
 else
   set background=light
 endif
-" ============= Colorscheme ===============
+" }}}
 
-" ============= Coc Completion ============
+" COC Completions {{{
 " Use tab for trigger completion with characters ahead and navigate.
 " Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin.
 inoremap <silent><expr> <TAB>
@@ -111,28 +117,28 @@ inoremap <silent><expr> <TAB>
       \ <SID>check_back_space() ? "\<TAB>" :
       \ coc#refresh()
 inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
-" ============= Coc Completion ============
+" }}}
 
-" ============= Indent line ===============
+" IndentLine {{{
 let g:indentLine_faster = 1
-let g:indentLine_setConceal = 0
-" ============= Indent line ===============
+" let g:indentLine_setConceal = 0
+" }}}
 
-" ============= Grepper ===================
+" Grepper {{{
 let g:grepper = {}
 runtime autoload/grepper.vim
 let g:grepper.jump = 1
 let g:grepper.stop = 500
 noremap <leader>gr :GrepperRg<Space>
 xmap gr <plug>(GrepperOperator)
-" ============= Grepper ===================
+" }}}
 
-" ============= Auto Save =================
+" Auto Save {{{
 let g:auto_save = 1
 let g:auto_save_silent = 1
 let g:auto_save_events = ["InsertLeave", "TextChanged", "FocusLost"]
-" ============= Auto Save =================
+" }}}
 
-" ============= Fugitive ==================
+" Fugitive {{{
 noremap <leader>gb :Gblame<CR>
-" ============= Fugitive ==================
+" }}}

@@ -1,5 +1,6 @@
 # Configuration for Alacritty, the GPU enhanced terminal emulator.
 
+# Environment {{{
 # Any items in the `env` entry below will be added as
 # environment variables. Some entries may override variables
 # set by alacritty itself.
@@ -11,7 +12,9 @@
   # check the local terminfo database and use `alacritty` if it is
   # available, otherwise `xterm-256color` is used.
   #TERM: xterm-256color
+# }}}
 
+# Window {{{
 window:
   # Window dimensions (changes require restart)
   #
@@ -45,7 +48,9 @@ window:
 
   # When true, alacritty starts maximized.
   start_maximized: false
+# }}}
 
+# Scrolling {{{
 scrolling:
   # Maximum number of lines in the scrollback buffer.
   # Specifying '0' will disable scrolling.
@@ -66,8 +71,9 @@ scrolling:
 
   # Scroll to the bottom when new text is written to the terminal.
   auto_scroll: false
+# }}}
 
-# Spaces per Tab (changes require restart)
+# Spaces per Tab (changes require restart) {{{
 #
 # This setting defines the width of a tab in cells.
 #
@@ -75,8 +81,9 @@ scrolling:
 # To prevent unexpected behavior in these applications, it's also required to
 # change the `it` value in terminfo when altering this setting.
 tabspaces: 8
+# }}}
 
-# Font configuration (changes require restart)
+# Font configuration (changes require restart) {{{
 font:
   # Normal (roman) font face
   normal:
@@ -153,68 +160,70 @@ persistent_logging: false
 
 # If `true`, bold text is drawn using the bright color variants.
 draw_bold_text_with_bright_colors: true
+# }}}
 
+# Colors {{{
 #Colors (Gruvbox dark)
-# colors:
-#   # Default colors
-#   primary:
-#     # hard contrast: background = '0x1d2021'
-#     background: '0x282828'
-#     # soft contrast: background = '0x32302f'
-#     foreground: '0xebdbb2'
-
-#   # Normal colors
-#   normal:
-#     black:   '0x282828'
-#     red:     '0xcc241d'
-#     green:   '0x98971a'
-#     yellow:  '0xd79921'
-#     blue:    '0x458588'
-#     magenta: '0xb16286'
-#     cyan:    '0x689d6a'
-#     white:   '0xa89984'
-
-#   # Bright colors
-#   bright:
-#     black:   '0x928374'
-#     red:     '0xfb4934'
-#     green:   '0xb8bb26'
-#     yellow:  '0xfabd2f'
-#     blue:    '0x83a598'
-#     magenta: '0xd3869b'
-#     cyan:    '0x8ec07c'
-#     white:   '0xebdbb2'
-    
-# Colors (Gruvbox light)
 colors:
   # Default colors
   primary:
-    # hard contrast: background = '0xf9f5d7'
-    background: '0xfbf1c7'
-    # soft contrast: background = '0xf2e5bc'
-    foreground: '0x3c3836'
+    # hard contrast: background = '0x1d2021'
+    background: '0x282828'
+    # soft contrast: background = '0x32302f'
+    foreground: '0xebdbb2'
 
   # Normal colors
   normal:
-    black:   '0xfbf1c7'
+    black:   '0x282828'
     red:     '0xcc241d'
     green:   '0x98971a'
     yellow:  '0xd79921'
     blue:    '0x458588'
     magenta: '0xb16286'
     cyan:    '0x689d6a'
-    white:   '0x7c6f64'
+    white:   '0xa89984'
 
   # Bright colors
   bright:
     black:   '0x928374'
-    red:     '0x9d0006'
-    green:   '0x79740e'
-    yellow:  '0xb57614'
-    blue:    '0x076678'
-    magenta: '0x8f3f71'
-    cyan:    '0x427b58'
-    white:   '0x3c3836'
+    red:     '0xfb4934'
+    green:   '0xb8bb26'
+    yellow:  '0xfabd2f'
+    blue:    '0x83a598'
+    magenta: '0xd3869b'
+    cyan:    '0x8ec07c'
+    white:   '0xebdbb2'
+    
+# Colors (Gruvbox light)
+# colors:
+#   # Default colors
+#   primary:
+#     # hard contrast: background = '0xf9f5d7'
+#     background: '0xfbf1c7'
+#     # soft contrast: background = '0xf2e5bc'
+#     foreground: '0x3c3836'
+
+#   # Normal colors
+#   normal:
+#     black:   '0xfbf1c7'
+#     red:     '0xcc241d'
+#     green:   '0x98971a'
+#     yellow:  '0xd79921'
+#     blue:    '0x458588'
+#     magenta: '0xb16286'
+#     cyan:    '0x689d6a'
+#     white:   '0x7c6f64'
+
+#   # Bright colors
+#   bright:
+#     black:   '0x928374'
+#     red:     '0x9d0006'
+#     green:   '0x79740e'
+#     yellow:  '0xb57614'
+#     blue:    '0x076678'
+#     magenta: '0x8f3f71'
+#     cyan:    '0x427b58'
+#     white:   '0x3c3836'
     
   # Dim colors
   #
@@ -239,8 +248,9 @@ colors:
   #   `- { index: 16, color: '0xff00ff' }`
   #
   indexed_colors: []
+# }}}
 
-# Visual Bell
+# Visual Bell {{{
 #
 # Any time the BEL code is received, Alacritty "rings" the visual bell. Once
 # rung, the terminal background will be set to white and transition back to the
@@ -271,8 +281,9 @@ visual_bell:
 # Window opacity as a floating point number from `0.0` to `1.0`.
 # The value `0.0` is completely transparent and `1.0` is opaque.
 background_opacity: 1.0
+# }}}
 
-# Mouse bindings
+# Mouse bindings {{{
 #
 # Available fields:
 #   - mouse
@@ -346,8 +357,9 @@ cursor:
 
 # Live config reload (changes require restart)
 live_config_reload: true
+# }}}
 
-# Shell
+# Shell {{{
 #
 # You can set `shell.program` to the path of your favorite shell, e.g. `/bin/fish`.
 # Entries in `shell.args` are passed unmodified as arguments to the shell.
@@ -373,8 +385,9 @@ enable_experimental_conpty_backend: false
 
 # Send ESC (\x1b) before characters when alt is pressed.
 alt_send_esc: true
+# }}}
 
-# Key bindings
+# Key bindings {{{
 #
 # Key bindings are specified as a list of objects. Each binding will specify a
 # key and modifiers required to trigger it, terminal modes where the binding is
@@ -459,6 +472,7 @@ alt_send_esc: true
 #   - AppCursor
 #   - ~AppKeypad
 #   - AppKeypad
+
 key_bindings:
   # (Windows/Linux only)
   #- { key: V,        mods: Control|Shift, action: Paste            }
@@ -582,3 +596,15 @@ key_bindings:
   - { key: F11,      mods: Super,   chars: "\x1b[23;3~"                      }
   - { key: F12,      mods: Super,   chars: "\x1b[24;3~"                      }
   - { key: NumpadEnter,             chars: "\n"                              }
+
+# Keybindings for German keyboards
+  - { key: Comma,     mods: Command,      command: {program: "open", args: ["~/.config/alacritty/alacritty.yml"]}     }
+  - { key: N,         mods: Command,      action: SpawnNewInstance       }
+  - { key: Key5,     mods: Alt,        chars: "\x5b"                     }
+  - { key: Key6,     mods: Alt,        chars: "\x5d"                     }
+  - { key: Key7,     mods: Alt|Shift,  chars: "\x5c"                     }
+  - { key: Key7,     mods: Alt,        chars: "\x7c"                     }
+  - { key: Key8,     mods: Alt,        chars: "\x7b"                     }
+  - { key: Key9,     mods: Alt,        chars: "\x7d"                     }
+  - { key: L,        mods: Alt,        chars: "\x40"                     }
+# }}}
