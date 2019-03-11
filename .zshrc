@@ -1,7 +1,9 @@
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/berzanmikaili/.oh-my-zsh"
+export ZSH="/Users/by/.oh-my-zsh"
 export VISUAL=nvim
 export EDITOR="$VISUAL"
+export LANG=en_US.UTF-8
+export LC_CTYPE=en_US.UTF-8
 
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 #ZSH_THEME="agnoster"
@@ -53,7 +55,6 @@ plugins=(git osx vi-mode zsh-syntax-highlighting zsh-autosuggestions autojump)
 source $ZSH/oh-my-zsh.sh
 
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=6'
-DEFAULT_USER="berzanmikaili"
 prompt_context(){} 
 
 # User configuration
