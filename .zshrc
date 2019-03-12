@@ -83,6 +83,7 @@ alias vi="nvim"
 alias ls="exa"
 alias la="exa -l"
 alias alacritty="vi ~/.config/alacritty/alacritty.yml"
+alias icloud="cd ~/Library/Mobile\ Documents/com~apple~CloudDocs/"
 # }}}
 
 # Fix for pasting with autosuggestions {{{

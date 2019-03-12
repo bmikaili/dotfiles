@@ -29,6 +29,7 @@ Plug 'tpope/vim-sleuth'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 Plug 'terryma/vim-smooth-scroll'
+Plug 'donRaphaco/neotex', { 'for': 'tex' }
 
 call plug#end()
 " }}}
@@ -143,4 +144,11 @@ let g:auto_save_events = ["InsertLeave", "TextChanged", "FocusLost"]
 
 " Fugitive {{{
 noremap <leader>gb :Gblame<CR>
+" }}}
+
+" Neotex {{{
+let g:neotex_enabled = 2
+let g:neotex_latexdiff = 1
+let g:neotex_pdflatex_alternative = "lualatex"
+let g:tex_flavor = 'latex'
 " }}}
