@@ -10,12 +10,6 @@
 # Disable press-and-hold for keys in favor of key repeat.
 defaults write -g ApplePressAndHoldEnabled -bool false
 
-# Enable font smoothing
-defaults write -g CGFontRenderingFontSmoothingDisabled -bool NO
-# To revert:
-defaults -currentHost delete -globalDomain AppleFontSmoothing
-defaults write -g CGFontRenderingFontSmoothingDisabled -bool YES
-
 # Use AirDrop over every interface. srsly this should be a default.
 defaults write com.apple.NetworkBrowser BrowseAllInterfaces 1
 
