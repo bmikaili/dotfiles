@@ -1,3 +1,6 @@
+# This is my ZSH configuration
+
+# Exports {{{
 # Path to your oh-my-zsh installation.
 export ZSH="./.oh-my-zsh"
 export VISUAL=nvim
@@ -5,31 +8,25 @@ export EDITOR="$VISUAL"
 export LANG=en_US.UTF-8
 export LC_CTYPE=en_US.UTF-8
 export FZF_DEFAULT_COMMAND='rg --files --no-ignore-vcs --hidden'
+export SSH_KEY_PATH="~/.ssh/rsa_id"
 
-# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-#ZSH_THEME="agnoster"
+# Preferred editor for local and remote sessions
+ if [[ -n $SSH_CONNECTION ]]; then
+   export EDITOR='vim'
+ else
+   export EDITOR='nvim'
+ fi
+# }}}
 
-# Uncomment the following line to use case-sensitive completion.
-# CASE_SENSITIVE="true"
-
-# Uncomment the following line to use hyphen-insensitive completion.
-# Case-sensitive completion must be off. _ and - will be interchangeable.
-# HYPHEN_INSENSITIVE="true"
-
-# Uncomment the following line to disable bi-weekly auto-update checks.
-# DISABLE_AUTO_UPDATE="true"
-
-# Uncomment the following line to change how often to auto-update (in days).
-# export UPDATE_ZSH_DAYS=13
-
+# General ZSH configuration {{{
 # Uncomment the following line to disable auto-setting terminal title.
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
+ENABLE_CORRECTION="true"
 
-# Uncomment the following line to display red dots whilst waiting for completion.
-# COMPLETION_WAITING_DOTS="true"
+# Fix for autocompletion coloring
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=6'
 
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
@@ -46,38 +43,31 @@ export FZF_DEFAULT_COMMAND='rg --files --no-ignore-vcs --hidden'
 
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
+# }}}
 
+# Plugins {{{
 # Standard plugins can be found in ~/.oh-my-zsh/plugins/*
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git osx vi-mode zsh-syntax-highlighting zsh-autosuggestions autojump)
+plugins=(gitfast 
+         osx 
+         vi-mode 
+         zsh-syntax-highlighting 
+         zsh-autosuggestions 
+         autojump 
+         docker 
+         docker-compose 
+         gradle 
+         cp 
+         gitignore 
+         tmux)
 
 source $ZSH/oh-my-zsh.sh
-
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=6'
 prompt_context(){} 
+# }}}
 
-# User configuration
-
-# export MANPATH="/usr/local/man:$MANPATH"
-
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
-
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
-
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
-
-# ssh
-export SSH_KEY_PATH="~/.ssh/rsa_id"
-
+# Aliases {{{
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
@@ -93,7 +83,9 @@ alias vi="nvim"
 alias ls="exa"
 alias la="exa -l"
 alias alacritty="vi ~/.config/alacritty/alacritty.yml"
-# This speeds up pasting w/ autosuggest
+# }}}
+
+# Fix for pasting with autosuggestions {{{
 # https://github.com/zsh-users/zsh-autosuggestions/issues/238
 pasteinit() {
   OLD_SELF_INSERT=${${(s.:.)widgets[self-insert]}[2,3]}
@@ -105,11 +97,9 @@ pastefinish() {
 }
 zstyle :bracketed-paste-magic paste-init pasteinit
 zstyle :bracketed-paste-magic paste-finish pastefinish
+# }}}
 
-# Set Spaceship ZSH as a prompt
-autoload -U promptinit; promptinit
-prompt spaceship
-
+# Fuzzy finder configuration {{{
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # fo [FUZZY PATTERN] - Open the selected file with the default editor
@@ -120,3 +110,13 @@ fo() {
   IFS=$'\n' files=($(fzf-tmux --query="$1" --multi --select-1 --exit-0))
   [[ -n "$files" ]] && ${EDITOR:-vim} "${files[@]}"
 }
+# }}}
+
+# Themes {{{
+# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
+#ZSH_THEME="agnoster"
+
+# Set Spaceship ZSH as a prompt
+autoload -U promptinit; promptinit
+prompt spaceship
+# }}}
