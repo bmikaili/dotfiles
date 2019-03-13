@@ -2,7 +2,7 @@
 
 # Exports {{{
 # Path to your oh-my-zsh installation.
-export ZSH="./.oh-my-zsh"
+export ZSH="/Users/by/.oh-my-zsh"
 export VISUAL=nvim
 export EDITOR="$VISUAL"
 export LANG=en_US.UTF-8
@@ -58,7 +58,6 @@ plugins=(gitfast
          autojump 
          docker 
          docker-compose 
-         gradle 
          cp 
          gitignore 
          tmux)

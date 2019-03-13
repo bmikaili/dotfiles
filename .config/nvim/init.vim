@@ -30,6 +30,7 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 Plug 'terryma/vim-smooth-scroll'
 Plug 'donRaphaco/neotex', { 'for': 'tex' }
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }}
 
 call plug#end()
 " }}}
@@ -123,8 +124,9 @@ inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 " }}}
 
 " IndentLine {{{
-let g:indentLine_faster = 1
-" let g:indentLine_setConceal = 0
+let g:indentLine_faster=1
+let g:indentLine_setColors=0
+let g:indentLine_setConceal = 0
 " }}}
 
 " Grepper {{{
@@ -151,4 +153,11 @@ let g:neotex_enabled = 2
 let g:neotex_latexdiff = 1
 let g:neotex_pdflatex_alternative = "lualatex"
 let g:tex_flavor = 'latex'
+" }}}
+
+" Markdown Preview {{{
+
+" Commands are :MarkdownPreview and :MarkdownPreviewStop
+" Listen to buffer write and display images as well
+let g:mkdp_auto_start = 0
 " }}}
