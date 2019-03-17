@@ -36,7 +36,7 @@ call plug#end()
 
 " General configs {{{
 " Set numbers on left
-set nu
+set rnu
 
 " Fold Option marker
 set foldmethod=marker
