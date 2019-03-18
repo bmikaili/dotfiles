@@ -2,7 +2,7 @@
 
 # Exports {{{
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/by/.oh-my-zsh"
+export ZSH="/Users/berzanmikaili/.oh-my-zsh"
 export VISUAL=nvim
 export EDITOR="$VISUAL"
 export LANG=en_US.UTF-8
@@ -83,6 +83,7 @@ alias ls="exa"
 alias la="exa -l"
 alias alacritty="vi ~/.config/alacritty/alacritty.yml"
 alias icloud="cd ~/Library/Mobile\ Documents/com~apple~CloudDocs/"
+alias tmuxconf="vi ~/.tmux.conf"
 # }}}
 
 # Fix for pasting with autosuggestions {{{
