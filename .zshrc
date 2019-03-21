@@ -2,13 +2,15 @@
 
 # Exports {{{
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/berzanmikaili/.oh-my-zsh"
+export ZSH="/Users/by/.oh-my-zsh"
 export VISUAL=nvim
 export EDITOR="$VISUAL"
 export LANG=en_US.UTF-8
 export LC_CTYPE=en_US.UTF-8
 export FZF_DEFAULT_COMMAND='rg --files --no-ignore-vcs --hidden'
 export SSH_KEY_PATH="~/.ssh/rsa_id"
+export ZPLUG_HOME=/usr/local/opt/zplug
+source $ZPLUG_HOME/init.zsh
 
 # Preferred editor for local and remote sessions
  if [[ -n $SSH_CONNECTION ]]; then
@@ -58,9 +60,24 @@ plugins=(gitfast
          autojump 
          docker 
          docker-compose 
+         gradle
          cp 
          gitignore 
          tmux)
+
+# ZPLUG
+zplug "akarzim/zsh-docker-aliases"
+#
+# Install plugins if there are plugins that have not been installed
+if ! zplug check --verbose; then
+    printf "Install? [y/N]: "
+    if read -q; then
+        echo; zplug install
+    fi
+fi
+
+# Then, source plugins and add commands to $PATH
+zplug load --verbose
 
 source $ZSH/oh-my-zsh.sh
 prompt_context(){} 
