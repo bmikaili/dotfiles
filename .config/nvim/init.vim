@@ -15,7 +15,6 @@ Plug 'Xuyuanp/nerdtree-git-plugin', { 'on': 'NERDTreeToggle' }
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
-Plug 'Yggdroot/indentLine'
 Plug 'mhinz/vim-grepper'
 Plug 'sheerun/vim-polyglot'
 Plug 'w0rp/ale'
@@ -32,6 +31,8 @@ Plug 'tpope/vim-sensible'
 Plug 'terryma/vim-smooth-scroll'
 Plug 'donRaphaco/neotex', { 'for': 'tex' }
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }}
+Plug 'phanviet/vim-monokai-pro'
+Plug 'patstockwell/vim-monokai-tasty'
 
 call plug#end()
 " }}}
@@ -98,20 +99,25 @@ let g:NERDTreeUpdateOnWrite      = 0
 
 " Airline {{{
 " Airline config
-let g:airline_theme='gruvbox'
+let g:airline_theme='monokai_tasty'
 " }}}
 
 " Colorscheme {{{
 " Colorscheme Configs
 set termguicolors
-colorscheme gruvbox
+let g:gruvbox_italic=1
+colorscheme monokai_pro
 
 " Color switching depending on System colors
-if system("defaults read -g AppleInterfaceStyle") =~ '^Dark'
-  set background=dark
-else
-  set background=light
-endif
+" if system("defaults read -g AppleInterfaceStyle") =~ '^Dark'
+"   set background=dark
+" else
+"   set background=light
+" endif
+" }}}
+
+" Highlighting {{{
+highlight Comment cterm=italic
 " }}}
 
 " COC Completions {{{
@@ -122,12 +128,6 @@ inoremap <silent><expr> <TAB>
       \ <SID>check_back_space() ? "\<TAB>" :
       \ coc#refresh()
 inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
-" }}}
-
-" IndentLine {{{
-let g:indentLine_faster=1
-let g:indentLine_setColors=0
-let g:indentLine_setConceal = 0
 " }}}
 
 " Grepper {{{
