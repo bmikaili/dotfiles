@@ -3,7 +3,6 @@
 " Plugins {{{
 call plug#begin('~/.local/share/nvim/plugged')
 
-Plug 'morhetz/gruvbox'
 Plug 'wellle/targets.vim'
 Plug 'michaeljsmith/vim-indent-object'
 Plug 'rhysd/clever-f.vim'
@@ -31,8 +30,7 @@ Plug 'tpope/vim-sensible'
 Plug 'terryma/vim-smooth-scroll'
 Plug 'donRaphaco/neotex', { 'for': 'tex' }
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }}
-Plug 'phanviet/vim-monokai-pro'
-Plug 'patstockwell/vim-monokai-tasty'
+Plug 'chriskempson/base16-vim'
 
 call plug#end()
 " }}}
@@ -99,21 +97,20 @@ let g:NERDTreeUpdateOnWrite      = 0
 
 " Airline {{{
 " Airline config
-let g:airline_theme='monokai_tasty'
+let g:airline_theme='base16'
 " }}}
 
 " Colorscheme {{{
 " Colorscheme Configs
 set termguicolors
 let g:gruvbox_italic=1
-colorscheme monokai_pro
 
 " Color switching depending on System colors
-" if system("defaults read -g AppleInterfaceStyle") =~ '^Dark'
-"   set background=dark
-" else
-"   set background=light
-" endif
+if system("defaults read -g AppleInterfaceStyle") =~ '^Dark'
+  colorscheme base16-onedark
+else
+  colorscheme base16-one-light
+endif
 " }}}
 
 " Highlighting {{{
@@ -162,3 +159,10 @@ let g:tex_flavor = 'latex'
 " Listen to buffer write and display images as well
 let g:mkdp_auto_start = 0
 " }}}
+
+" Base 16 {{{
+if filereadable(expand("~/.vimrc_background"))
+  let base16colorspace=256
+  source ~/.vimrc_background
+endif
+"

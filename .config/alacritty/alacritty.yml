@@ -164,35 +164,100 @@ draw_bold_text_with_bright_colors: true
 
 # Colors {{{
 
-# Colors (Monokai Pro)
+# Base16 One Light 256 - alacritty color config
+# Daniel Pfeifer (http://github.com/purpleKarrot)
 colors:
   # Default colors
   primary:
-    background: '0x2D2A2E'
-    foreground: '0xFCFCFA'
+    background: '0xfafafa'
+    foreground: '0x383a42'
+
+  # Colors the cursor will use if `custom_cursor_colors` is true
+  cursor:
+    text: '0xfafafa'
+    cursor: '0x383a42'
 
   # Normal colors
   normal:
-    black:   '0x403E41'
-    red:     '0xFF6188'
-    green:   '0xA9DC76'
-    yellow:  '0xFFD866'
-    blue:    '0xFC9867'
-    magenta: '0xAB9DF2'
-    cyan:    '0x78DCE8'
-    white:   '0xFCFCFA'
+    black:   '0xfafafa'
+    red:     '0xca1243'
+    green:   '0x50a14f'
+    yellow:  '0xc18401'
+    blue:    '0x4078f2'
+    magenta: '0xa626a4'
+    cyan:    '0x0184bc'
+    white:   '0x383a42'
 
+  # Bright colors
   bright:
-    black:   '0x727072'
-    red:     '0xFF6188'
-    green:   '0xA9DC76'
-    yellow:  '0xFFD866'
-    blue:    '0xFC9867'
-    magenta: '0xAB9DF2'
-    cyan:    '0x78DCE8'
-    white:   '0xFCFCFA'
-
+    black:   '0xa0a1a7'
+    red:     '0xca1243'
+    green:   '0x50a14f'
+    yellow:  '0xc18401'
+    blue:    '0x4078f2'
+    magenta: '0xa626a4'
+    cyan:    '0x0184bc'
+    white:   '0x090a0b'
+ 
+  # Indexed Colors
+  #
+  # The indexed colors include all colors from 16 to 256.
+  # When these are not set, they're filled with sensible defaults.
+  #
+  # Example:
+  #   `- { index: 16, color: '0xff00ff' }`
+  #
+  indexed_colors:
+    - { index: 16, color: '0xd75f00' }
+    - { index: 17, color: '0x986801' }
+    - { index: 18, color: '0xf0f0f1' }
+    - { index: 19, color: '0xe5e5e6' }
+    - { index: 20, color: '0x696c77' }
+    - { index: 21, color: '0x202227' }
     
+# # Base16 OneDark 256 - alacritty color config
+# # Lalit Magant (http://github.com/tilal6991)
+# colors:
+#   # Default colors
+#   primary:
+#     background: '0x282c34'
+#     foreground: '0xabb2bf'
+
+#   # Colors the cursor will use if `custom_cursor_colors` is true
+#   cursor:
+#     text: '0x282c34'
+#     cursor: '0xabb2bf'
+
+#   # Normal colors
+#   normal:
+#     black:   '0x282c34'
+#     red:     '0xe06c75'
+#     green:   '0x98c379'
+#     yellow:  '0xe5c07b'
+#     blue:    '0x61afef'
+#     magenta: '0xc678dd'
+#     cyan:    '0x56b6c2'
+#     white:   '0xabb2bf'
+
+#   # Bright colors
+#   bright:
+#     black:   '0x545862'
+#     red:     '0xe06c75'
+#     green:   '0x98c379'
+#     yellow:  '0xe5c07b'
+#     blue:    '0x61afef'
+#     magenta: '0xc678dd'
+#     cyan:    '0x56b6c2'
+#     white:   '0xc8ccd4'
+
+#   indexed_colors:
+#     - { index: 16, color: '0xd19a66' }
+#     - { index: 17, color: '0xbe5046' }
+#     - { index: 18, color: '0x353b45' }
+#     - { index: 19, color: '0x3e4451' }
+#     - { index: 20, color: '0x565c64' }
+#     - { index: 21, color: '0xb6bdca' }
+
   # Dim colors
   #
   # If the dim colors are not set, they will be calculated automatically based
@@ -207,15 +272,6 @@ colors:
   #  cyan:    '0x497e7a'
   #  white:   '0x9a9a9a'
 
-  # Indexed Colors
-  #
-  # The indexed colors include all colors from 16 to 256.
-  # When these are not set, they're filled with sensible defaults.
-  #
-  # Example:
-  #   `- { index: 16, color: '0xff00ff' }`
-  #
-  indexed_colors: []
 # }}}
 
 # Visual Bell {{{
@@ -576,4 +632,3 @@ key_bindings:
   - { key: Key9,     mods: Alt,        chars: "\x7d"                     }
   - { key: L,        mods: Alt,        chars: "\x40"                     }
 # }}}
-

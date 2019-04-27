@@ -16,6 +16,13 @@ export SSH_KEY_PATH="~/.ssh/rsa_id"
  else
    export EDITOR='nvim'
  fi
+
+ # Base16 Shell
+BASE16_SHELL="$HOME/.config/base16-shell/"
+[ -n "$PS1" ] && \
+    [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
+        eval "$("$BASE16_SHELL/profile_helper.sh")"
+
 # }}}
 
 # General ZSH configuration {{{
@@ -84,7 +91,7 @@ alias ls="exa"
 alias la="exa -l"
 alias s="sudo "
 alias alacritty="vi ~/.config/alacritty/alacritty.yml"
-alias icloud="~/Library/Mobile\ Documents/com~apple~CloudDocs/"
+alias icloud="cd ~/Library/Mobile\ Documents/com~apple~CloudDocs/"
 alias tmuxconf="vi ~/.tmux.conf"
 # }}}
 
