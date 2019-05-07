@@ -31,6 +31,7 @@ Plug 'terryma/vim-smooth-scroll'
 Plug 'donRaphaco/neotex', { 'for': 'tex' }
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }}
 Plug 'chriskempson/base16-vim'
+Plug 'rakr/vim-one'
 
 call plug#end()
 " }}}
@@ -38,6 +39,10 @@ call plug#end()
 " General configs {{{
 " Set numbers on left
 set rnu
+
+" Vim inside TMUX proper colors
+set t_8b=^[[48;2;%lu;%lu;%lum
+set t_8f=^[[38;2;%lu;%lu;%lum
 
 " Fold Option marker
 set foldmethod=marker
@@ -97,19 +102,20 @@ let g:NERDTreeUpdateOnWrite      = 0
 
 " Airline {{{
 " Airline config
-let g:airline_theme='base16'
+let g:airline_theme='one'
 " }}}
 
 " Colorscheme {{{
 " Colorscheme Configs
 set termguicolors
 let g:gruvbox_italic=1
+colorscheme one
 
 " Color switching depending on System colors
 if system("defaults read -g AppleInterfaceStyle") =~ '^Dark'
-  colorscheme base16-onedark
+  set background=dark
 else
-  colorscheme base16-one-light
+  set background=light
 endif
 " }}}
 

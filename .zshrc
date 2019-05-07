@@ -68,6 +68,7 @@ plugins=(gitfast
          gradle
          cp 
          gitignore 
+         kubectl
          tmux)
 
 source $ZSH/oh-my-zsh.sh
