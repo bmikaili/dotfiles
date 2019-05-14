@@ -25,6 +25,23 @@ BASE16_SHELL="$HOME/.config/base16-shell/"
 
 # }}}
 
+# Zplug {{{
+source ~/.zplug/init.zsh
+
+zplug "akarzim/zsh-docker-aliases"
+
+# Install plugins if there are plugins that have not been installed
+if ! zplug check --verbose; then
+    printf "Install? [y/N]: "
+    if read -q; then
+        echo; zplug install
+    fi
+fi
+
+# Then, source plugins and add commands to $PATH
+zplug load --verbose
+# }}}
+
 # General ZSH configuration {{{
 # Uncomment the following line to disable auto-setting terminal title.
 # DISABLE_AUTO_TITLE="true"
@@ -57,7 +74,7 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=6'
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(gitfast 
+plugins=(git
          osx 
          vi-mode 
          zsh-syntax-highlighting 
@@ -70,6 +87,7 @@ plugins=(gitfast
          gitignore 
          kubectl
          tmux)
+
 
 source $ZSH/oh-my-zsh.sh
 prompt_context(){} 
