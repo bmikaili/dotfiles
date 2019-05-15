@@ -382,10 +382,12 @@ live_config_reload: true
 # Default:
 #   - (Linux/macOS) /bin/bash --login
 #   - (Windows) powershell
-#shell:
-#  program: /bin/bash
-#  args:
-#    - --login
+shell:
+  program: /bin/zsh
+  args:
+    - --login
+    - -c
+    - 'tmux attach -t TMUX || tmux new -s TMUX'
 
 # Windows 10 ConPTY backend (Windows only)
 #
