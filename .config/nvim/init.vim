@@ -38,6 +38,7 @@ call plug#end()
 
 " General configs {{{
 " Set numbers on left
+set shell=/bin/zsh
 set rnu
 
 " Vim inside TMUX proper colors
@@ -111,12 +112,25 @@ set termguicolors
 let g:gruvbox_italic=1
 colorscheme one
 
-" Color switching depending on System colors
 if system("defaults read -g AppleInterfaceStyle") =~ '^Dark'
-  set background=dark
+    let bkgd = "dark"
+    let cmd = "!tsd"
 else
-  set background=light
+    let bkgd = "light"
+    let cmd = "!tsl"
 endif
+if &background !~ bkgd
+    let &background = bkgd
+    execute "silent " . cmd
+endif
+" Color switching depending on System colors
+" if system("defaults read -g AppleInterfaceStyle") =~ '^Dark'
+"   set background=dark
+"   :silent !tsd
+" else
+"   set background=light
+"   :silent !tsl
+" endif
 " }}}
 
 " Highlighting {{{

@@ -112,6 +112,15 @@ alias s="sudo "
 alias alacritty="vi ~/.config/alacritty/alacritty.yml"
 alias icloud="cd ~/Library/Mobile\ Documents/com~apple~CloudDocs/"
 alias tmuxconf="vi ~/.tmux.conf"
+alias tsd="terminal-scheme dark"
+alias tsl="terminal-scheme light"
+# }}}
+
+# Functions {{{
+function terminal-scheme() {
+  config_file=~/.config/alacritty/alacritty.yml
+  sed -i "" "s/\(^colors: \*\).*/\1$1/g" $config_file
+}
 # }}}
 
 # Fix for pasting with autosuggestions {{{
@@ -149,3 +158,9 @@ fo() {
 autoload -U promptinit; promptinit
 prompt spaceship
 # }}}
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/berzanmikaili/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/berzanmikaili/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/berzanmikaili/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/berzanmikaili/google-cloud-sdk/completion.zsh.inc'; fi
