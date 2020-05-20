@@ -9,7 +9,6 @@ export LANG=en_US.UTF-8
 export LC_CTYPE=en_US.UTF-8
 export FZF_DEFAULT_COMMAND='rg --files --no-ignore-vcs --hidden'
 export SSH_KEY_PATH="~/.ssh/rsa_id"
-# export PATH="/usr/local/anaconda3/bin:$PATH"  # commented out by conda initialize
 
 # Preferred editor for local and remote sessions
  if [[ -n $SSH_CONNECTION ]]; then
@@ -18,11 +17,11 @@ export SSH_KEY_PATH="~/.ssh/rsa_id"
    export EDITOR='nvim'
  fi
 
- # Base16 Shell
-BASE16_SHELL="$HOME/.config/base16-shell/"
-[ -n "$PS1" ] && \
-    [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
-        eval "$("$BASE16_SHELL/profile_helper.sh")"
+ # # Base16 Shell
+# BASE16_SHELL="$HOME/.config/base16-shell/"
+# [ -n "$PS1" ] && \
+ #    [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
+ #        eval "$("$BASE16_SHELL/profile_helper.sh")"
 
 # }}}
 
@@ -44,30 +43,11 @@ zplug load --verbose
 # }}}
 
 # General ZSH configuration {{{
-# Uncomment the following line to disable auto-setting terminal title.
-# DISABLE_AUTO_TITLE="true"
-
 # Uncomment the following line to enable command auto-correction.
 ENABLE_CORRECTION="true"
 
 # Fix for autocompletion coloring
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=6'
-
-# Uncomment the following line if you want to disable marking untracked files
-# under VCS as dirty. This makes repository status check for large repositories
-# much, much faster.
-# DISABLE_UNTRACKED_FILES_DIRTY="true"
-
-# Uncomment the following line if you want to change the command execution time
-# stamp shown in the history command output.
-# You can set one of the optional three formats:
-# "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
-# or set a custom format using the strftime function format specifications,
-# see 'man strftime' for details.
-#HIST_STAMPS="dd.mm.yyyy"
-
-# Would you like to use another custom folder than $ZSH/custom?
-# ZSH_CUSTOM=/path/to/new-custom-folder
 # }}}
 
 # Plugins {{{
