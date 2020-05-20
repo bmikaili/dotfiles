@@ -8,7 +8,7 @@
 # Run ./set-defaults.sh and you'll be good to go.
 
 # Fixes thin fonts on iterm with external monitors
-defaults -currentHost write -globalDomain AppleFontSmoothing -int 2
+defaults write -g CGFontRenderingFontSmoothingDisabled -bool NO
 
 # Disable press-and-hold for keys in favor of key repeat.
 defaults write -g ApplePressAndHoldEnabled -bool false
