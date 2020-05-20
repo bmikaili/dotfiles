@@ -112,25 +112,18 @@ set termguicolors
 let g:gruvbox_italic=1
 colorscheme one
 
-if system("defaults read -g AppleInterfaceStyle") =~ '^Dark'
-    let bkgd = "dark"
-    let cmd = "!tsd"
-else
-    let bkgd = "light"
-    let cmd = "!tsl"
-endif
-if &background !~ bkgd
-    let &background = bkgd
-    execute "silent " . cmd
-endif
-" Color switching depending on System colors
-" if system("defaults read -g AppleInterfaceStyle") =~ '^Dark'
-"   set background=dark
-"   :silent !tsd
-" else
-"   set background=light
-"   :silent !tsl
-" endif
+function! SetBackgroundMode(...)
+    if system("defaults read -g AppleInterfaceStyle") =~ '^Dark'
+      set background=dark
+      :silent !tsd
+    else
+      set background=light
+      :silent !tsl
+    endif
+endfunction
+call SetBackgroundMode()
+call timer_start(3000, "SetBackgroundMode", {"repeat": -1})
+" " Color switching depending on System colors
 " }}}
 
 " Highlighting {{{
@@ -179,10 +172,3 @@ let g:tex_flavor = 'latex'
 " Listen to buffer write and display images as well
 let g:mkdp_auto_start = 0
 " }}}
-
-" Base 16 {{{
-if filereadable(expand("~/.vimrc_background"))
-  let base16colorspace=256
-  source ~/.vimrc_background
-endif
-"
