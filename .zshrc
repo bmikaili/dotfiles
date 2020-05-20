@@ -9,6 +9,7 @@ export LANG=en_US.UTF-8
 export LC_CTYPE=en_US.UTF-8
 export FZF_DEFAULT_COMMAND='rg --files --no-ignore-vcs --hidden'
 export SSH_KEY_PATH="~/.ssh/rsa_id"
+# export PATH="/usr/local/anaconda3/bin:$PATH"  # commented out by conda initialize
 
 # Preferred editor for local and remote sessions
  if [[ -n $SSH_CONNECTION ]]; then
@@ -76,7 +77,6 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=6'
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git
          osx 
-         vi-mode 
          zsh-syntax-highlighting 
          zsh-autosuggestions 
          autojump 
@@ -164,3 +164,19 @@ if [ -f '/Users/berzanmikaili/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/b
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/berzanmikaili/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/berzanmikaili/google-cloud-sdk/completion.zsh.inc'; fi
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/usr/local/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/usr/local/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/usr/local/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/usr/local/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
