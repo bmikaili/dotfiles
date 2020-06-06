@@ -9,6 +9,11 @@ export LANG=en_US.UTF-8
 export LC_CTYPE=en_US.UTF-8
 export FZF_DEFAULT_COMMAND='rg --files --no-ignore-vcs --hidden'
 export SSH_KEY_PATH="~/.ssh/rsa_id"
+export GOPATH="$HOME/go"
+export DATADOG_ROOT="$GOPATH/src/github.com/DataDog"
+export PATH="$PATH:$GOPATH/bin:$DATADOG_ROOT/devtools/bin"
+fpath=(path/to/zsh-completions/src $fpath)
+ssh-add -K
 
 # Preferred editor for local and remote sessions
  if [[ -n $SSH_CONNECTION ]]; then
@@ -31,6 +36,9 @@ ENABLE_CORRECTION="true"
 
 # Fix for autocompletion coloring
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=6'
+
+bindkey "^[[A" history-substring-search-up
+bindkey "^[[B" history-substring-search-down
 # }}}
 
 # Plugins {{{
@@ -39,21 +47,24 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=6'
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git
-         osx 
-         zsh-syntax-highlighting 
-         zsh-autosuggestions 
-         autojump 
-         docker 
-         docker-compose 
+         osx
+         zsh-completions
+         zsh-syntax-highlighting
+         zsh-autosuggestions
+         zsh-history-substring-search
+         autojump
+         docker
+         docker-compose
          gradle
-         cp 
-         gitignore 
+         cp
+         gitignore
          kubectl
+
          tmux)
 
 
 source $ZSH/oh-my-zsh.sh
-prompt_context(){} 
+prompt_context() {}
 # }}}
 
 # Aliases {{{
@@ -78,7 +89,10 @@ alias s="sudo "
 alias alacritty="vi ~/.config/alacritty/alacritty.yml"
 alias icloud="cd ~/Library/Mobile\ Documents/com~apple~CloudDocs/"
 alias tmuxconf="vi ~/.tmux.conf"
+alias td="tmux detach"
+alias find="fd"
 alias tsd="terminal-scheme dark"
+alias rm="trash"
 alias tsl="terminal-scheme light"
 # }}}
 
@@ -125,12 +139,15 @@ autoload -U promptinit; promptinit
 prompt spaceship
 # }}}
 
+# Gcloud {{{
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/berzanmikaili/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/berzanmikaili/google-cloud-sdk/path.zsh.inc'; fi
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/berzanmikaili/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/berzanmikaili/google-cloud-sdk/completion.zsh.inc'; fi
+# }}}
 
+# Conda {{{
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/usr/local/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
@@ -145,4 +162,52 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
+# }}}
 
+# Completions {{{
+if type brew &>/dev/null; then
+  FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
+
+  autoload -Uz compinit
+  compinit
+fi
+# }}}
+
+# Datadog {{{
+# BEGIN ANSIBLE MANAGED BLOCK
+# Add homebrew binaries to the path.
+export PATH="/usr/local/bin:${PATH?}"
+
+# Force certain more-secure behaviours from homebrew
+export HOMEBREW_NO_INSECURE_REDIRECT=1
+export HOMEBREW_CASK_OPTS=--require-sha
+
+# Load ruby shims
+eval "$(rbenv init -)"
+
+# Prefer GNU binaries to Macintosh binaries.
+export PATH="/usr/local/opt/coreutils/libexec/gnubin:${PATH}"
+
+# Add AWS CLI to PATH
+export PATH="/usr/local/opt/awscli@1/bin:$PATH"
+
+# Add datadog devtools binaries to the PATH
+export PATH="${HOME?}/dd/devtools/bin:${PATH?}"
+
+# Point GOPATH to our go sources
+export GOPATH="${HOME?}/go"
+
+# Point DATADOG_ROOT to ~/dd symlink
+export DATADOG_ROOT="${HOME?}/dd"
+
+# Tell the devenv vm to mount $GOPATH/src rather than just dd-go
+export MOUNT_ALL_GO_SRC=1
+
+# store key in the login keychain instead of aws-vault managing a hidden keychain
+export AWS_VAULT_KEYCHAIN_NAME=login
+
+# tweak session times so you don't have to re-enter passwords every 5min
+export AWS_SESSION_TTL=24h
+export AWS_ASSUME_ROLE_TTL=1h
+# END ANSIBLE MANAGED BLOCK
+# }}}

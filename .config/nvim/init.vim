@@ -53,17 +53,20 @@ language en_US
 " Remap leader key
 let mapleader = " "
 
-" Remap tab to 2 spaces
-set tabstop=2       " The width of a TAB is set to 2.
-                    " Still it is a \t. It is just that
-                    " Vim will interpret it to be having
-                    " a width of 2.
+"Remove trailing whitespace on save
+autocmd BufWritePre * :%s/\s\+$//e
 
-set shiftwidth=2    " Indents will have a width of 2
+"Adding newline at end of file is default for vim
 
-set softtabstop=2   " Sets the number of columns for a TAB
+"Set default tab width to 4
+set shiftwidth=4
+set softtabstop=4
 
-set expandtab       " Expand TABs to spaces
+"Expand tabs to spaces
+set expandtab
+
+"Show ruler at 100 character limit (change as needed)
+set colorcolumn=100
 " }}}
 
 " Fuzzy Finder {{{

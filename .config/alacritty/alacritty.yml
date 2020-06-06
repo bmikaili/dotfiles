@@ -220,7 +220,7 @@ color_schemes:
       - { index: 20, color: '0x565c64' }
       - { index: 21, color: '0xb6bdca' }
 
-colors: *light
+colors: *dark
  
   # Dim colors
   #
