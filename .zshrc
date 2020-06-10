@@ -37,8 +37,6 @@ ENABLE_CORRECTION="true"
 # Fix for autocompletion coloring
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=6'
 
-bindkey "^[[A" history-substring-search-up
-bindkey "^[[B" history-substring-search-down
 # }}}
 
 # Plugins {{{
@@ -67,6 +65,11 @@ source $ZSH/oh-my-zsh.sh
 prompt_context() {}
 # }}}
 
+# Keybinds {{{
+bindkey "^[[A" history-substring-search-up
+bindkey "^[[B" history-substring-search-down
+#}}}
+
 # Aliases {{{
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
@@ -92,7 +95,6 @@ alias tmuxconf="vi ~/.tmux.conf"
 alias td="tmux detach"
 alias find="fd"
 alias tsd="terminal-scheme dark"
-alias rm="trash"
 alias tsl="terminal-scheme light"
 # }}}
 
@@ -209,5 +211,7 @@ export AWS_VAULT_KEYCHAIN_NAME=login
 # tweak session times so you don't have to re-enter passwords every 5min
 export AWS_SESSION_TTL=24h
 export AWS_ASSUME_ROLE_TTL=1h
+
+dd-branch(){git checkout -b berzan/$1}
 # END ANSIBLE MANAGED BLOCK
 # }}}
