@@ -9,11 +9,7 @@ export LANG=en_US.UTF-8
 export LC_CTYPE=en_US.UTF-8
 export FZF_DEFAULT_COMMAND='rg --files --no-ignore-vcs --hidden'
 export SSH_KEY_PATH="~/.ssh/rsa_id"
-export GOPATH="$HOME/go"
-export DATADOG_ROOT="$GOPATH/src/github.com/DataDog"
-export PATH="$PATH:$GOPATH/bin:$DATADOG_ROOT/devtools/bin"
 fpath=(path/to/zsh-completions/src $fpath)
-ssh-add -K
 
 # Preferred editor for local and remote sessions
  if [[ -n $SSH_CONNECTION ]]; then
@@ -174,6 +170,7 @@ if type brew &>/dev/null; then
   compinit
 fi
 # }}}
+<<<<<<< HEAD
 
 # Datadog {{{
 # BEGIN ANSIBLE MANAGED BLOCK
@@ -215,3 +212,5 @@ export AWS_ASSUME_ROLE_TTL=1h
 dd-branch(){git checkout -b berzan/$1}
 # END ANSIBLE MANAGED BLOCK
 # }}}
+=======
+>>>>>>> cbbe0314ca0378c3c8ccc9ebee7781edf7e22972
