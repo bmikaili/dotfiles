@@ -1,6 +1,12 @@
 /Users/berzanmikaili
-/Users/berzanmikaili/.config
+/
+/usr
+/usr/local
+/usr/local/share
+/usr/local/share/zsh/site-functions
+/usr/local/share/zsh
 /Users/berzanmikaili/.config/zsh
+/Users/berzanmikaili/.config
 /Users/berzanmikaili/Developer
 /Users/berzanmikaili/Developer/website
 /Users
@@ -11,8 +17,3 @@
 /Users/berzanmikaili/Library/Application Support
 /Users/berzanmikaili/Library/Application Support/iTerm2
 /Users/berzanmikaili/Library/Application Support/iTerm2/Scripts
-/Users/berzanmikaili/Library/Application Support/iTerm2/Scripts/AutoLaunch
-/Users/berzanmikaili/Developer/website/src
-/Users/berzanmikaili/Developer/website/src/assets
-/Users/berzanmikaili/Developer/website/src/assets/css
-/Users/berzanmikaili/.config/zsh/spaceship-prompt

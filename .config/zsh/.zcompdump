@@ -92,6 +92,7 @@ _comps=(
 'Mail' '_mail'
 'Mosaic' '_webbrowser'
 'SuSEconfig' '_SUSEconfig'
+'_git_log_prettily' '_git'
 'a2dismod' '_a2utils'
 'a2dissite' '_a2utils'
 'a2enmod' '_a2utils'
@@ -151,6 +152,7 @@ _comps=(
 'arena' '_webbrowser'
 'arp' '_arp'
 'arping' '_arping'
+'asc' '_ssh'
 'asciidoctor' '_asciidoctor'
 'asciinema' '_asciinema'
 'ash' '_sh'
@@ -544,7 +546,9 @@ _comps=(
 'gdd' '_dd'
 'gdf' '_df'
 'gdiff' '_diff'
+'gdnolock' '_git'
 'gdu' '_du'
+'gdv' '_git'
 'geany' '_geany'
 'gegrep' '_grep'
 'gem' '_gem'
@@ -569,7 +573,13 @@ _comps=(
 'gfmt' '_fmt'
 'gfold' '_fold'
 'ggetopt' '_getopt'
+'ggf' '_git'
+'ggfl' '_git'
+'ggl' '_git'
+'ggp' '_git'
+'ggpnp' '_git'
 'ggrep' '_grep'
+'ggu' '_git'
 'ggv' '_gnome-gv'
 'ghead' '_head'
 'ghostscript' '_ghostscript'
@@ -1711,10 +1721,20 @@ _services=(
 '-redirect-,>,gzip' 'gunzip'
 '-redirect-,>,xz' 'unxz'
 'Mail' 'mail'
+'_git_log_prettily' 'git-log'
+'asc' 'ssh'
 'bzcat' 'bunzip2'
 'dch' 'debchange'
 'gchgrp' 'chgrp'
 'gchown' 'chown'
+'gdnolock' 'git-diff'
+'gdv' 'git-diff'
+'ggf' 'git-checkout'
+'ggfl' 'git-checkout'
+'ggl' 'git-checkout'
+'ggp' 'git-checkout'
+'ggpnp' 'git-checkout'
+'ggu' 'git-checkout'
 'gnupod_INIT.pl' 'gnupod_INIT'
 'gnupod_addsong.pl' 'gnupod_addsong'
 'gnupod_check.pl' 'gnupod_check'
@@ -1780,7 +1800,6 @@ zle -C _bash_complete-word .complete-word _bash_completions
 zle -C _bash_list-choices .list-choices _bash_completions
 zle -C _complete_debug .complete-word _complete_debug
 zle -C _complete_help .complete-word _complete_help
-zle -C _complete_screen_display .complete-word _complete_screen_display
 zle -C _complete_tag .complete-word _complete_tag
 zle -C _correct_filename .complete-word _correct_filename
 zle -C _correct_word .complete-word _correct_word
@@ -1795,7 +1814,6 @@ zle -C _read_comp .complete-word _read_comp
 bindkey '^X^R' _read_comp
 bindkey '^X?' _complete_debug
 bindkey '^XC' _correct_filename
-bindkey '^XS' _complete_screen_display
 bindkey '^Xa' _expand_alias
 bindkey '^Xc' _correct_word
 bindkey '^Xe' _expand_word

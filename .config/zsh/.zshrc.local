@@ -34,39 +34,6 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=6'
 
 # }}}
 
-# Plugins {{{
-# Standard plugins can be found in ~/.oh-my-zsh/plugins/*
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
-# plugins=(git
-#          osx
-#          zsh-completions
-#          zsh-syntax-highlighting
-#          zsh-autosuggestions
-#          zsh-history-substring-search
-#          autojump
-#          docker
-#          docker-compose
-#          gradle
-#          cp
-#          gitignore
-#          kubectl
-
-#          tmux)
-
-
-# source $ZSH/oh-my-zsh.sh
-# prompt_context() {}
-source ~/.config/zsh/zsh-z/zsh-z.plugin.zsh
-
-# }}}
-
-# Keybinds {{{
-bindkey "^[[A" history-substring-search-up
-bindkey "^[[B" history-substring-search-down
-#}}}
-
 # Aliases {{{
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
@@ -125,6 +92,7 @@ if type brew &>/dev/null; then
   FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
 
   autoload -Uz compinit
+  rm -f ~/.zcompdump
   compinit
 fi
 # }}}
@@ -446,3 +414,41 @@ function grename() {
 
 unset git_version
 # }}}
+
+# Plugins {{{
+# Standard plugins can be found in ~/.oh-my-zsh/plugins/*
+# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
+# Example format: plugins=(rails git textmate ruby lighthouse)
+# Add wisely, as too many plugins slow down shell startup.
+# plugins=(git
+#          osx
+#          zsh-completions
+#          zsh-syntax-highlighting
+#          zsh-autosuggestions
+#          zsh-history-substring-search
+#          autojump
+#          docker
+#          docker-compose
+#          gradle
+#          cp
+#          gitignore
+#          kubectl
+
+#          tmux)
+
+
+# source $ZSH/oh-my-zsh.sh
+# prompt_context() {}
+zle -N history-substring-search-up; zle -N history-substring-search-down
+
+source ~/.config/zsh/zsh-z/zsh-z.plugin.zsh
+source ~/.config/zsh/zsh-docker-aliases/alias.zsh
+source ~/.config/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /opt/homebrew/share/zsh-history-substring-search/zsh-history-substring-search.zsh
+# }}}
+
+# Keybinds {{{
+bindkey "^[[A" history-substring-search-up
+bindkey "^[[B" history-substring-search-down
+#}}}
