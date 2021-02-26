@@ -90,7 +90,7 @@ let NERDTreeHijackNetrw = 0
 noremap <silent> <leader>n :NERDTreeToggle<CR> <C-w>=
 noremap <silent> <leader>f :NERDTreeFind<CR> <C-w>=
 
-" Auto-refresh 
+" Auto-refresh
 function! NERDTreeRefresh()
     if &filetype == "nerdtree"
         silent exe substitute(mapcheck("R"), "<CR>", "", "")
