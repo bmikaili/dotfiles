@@ -32,7 +32,7 @@ defaults write com.apple.dock wvous-bl-corner -int 5
 defaults write com.apple.dock wvous-bl-modifier -int 0
 
 # Hide Safari's bookmark bar.
-defaults write com.apple.Safari ShowFavoritesBar -bool false
+defaults write com.apple.Safari ShowFavoritesBar -bool true
 
 # Set up Safari for development.
 defaults write com.apple.Safari IncludeInternalDebugMenu -bool true
@@ -40,3 +40,10 @@ defaults write com.apple.Safari IncludeDevelopMenu -bool true
 defaults write com.apple.Safari WebKitDeveloperExtrasEnabledPreferenceKey -bool true
 defaults write com.apple.Safari "com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled" -bool true
 defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
+
+# Change screenshot folder
+mkdir -p ~/Screenshots
+defaults write com.apple.screencapture location ~/Screenshots && killall SystemUIServer
+
+# Wow Keybindings Razer Naga
+defaults write com.blizzard.worldofwarcraft disable-expose-fix -bool YES
