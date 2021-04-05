@@ -3322,6 +3322,7 @@ export COLORTERM="yes"
 [[ -n "$GRML_NO_SMALL_ALIASES" ]] || alias da='du -sch'
 
 # listing stuff
+alias ls="command exa"
 #a2# Execute \kbd{ls -lSrah}
 alias dir="command ls -lSrah"
 #a2# Only show dot-directories
