@@ -1,6 +1,7 @@
 /*
 /*/
 !./config
+!install.fish
 ./.config/gcloud/
 ./.config/gh*
 ./.config/github-copilot/
