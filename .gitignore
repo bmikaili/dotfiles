@@ -1,0 +1,6 @@
+/*
+/*/
+!./config
+./.config/gcloud/
+./.config/gh*
+./.config/github-copilot/

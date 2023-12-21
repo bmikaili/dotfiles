@@ -326,34 +326,35 @@ live_config_reload: true
 colors:
   # Default colors
   primary:
-    background: '#000000'
-    foreground: '#ffffff'
-  cursor:
-    text: '#F81CE5'
-    cursor: '#ffffff'
+    background: '0xffffff'
+    foreground: '0x586069'
 
   # Normal colors
   normal:
-    black: '#000000'
-    red: '#fe0100'
-    green: '#33ff00'
-    yellow: '#feff00'
-    blue: '#0066ff'
-    magenta: '#cc00ff'
-    cyan: '#00ffff'
-    white: '#d0d0d0'
+    black: '0x697179'
+    red: '0xd03d3d'
+    green: '0x14ce14'
+    yellow: '0x949800'
+    blue: '0x0451a5'
+    magenta: '0xbc05bc'
+    cyan: '0x0598bc'
+    white: '0x586069'
 
   # Bright colors
   bright:
-    black: '#808080'
-    red: '#fe0100'
-    green: '#33ff00'
-    yellow: '#feff00'
-    blue: '#0066ff'
-    magenta: '#cc00ff'
-    cyan: '#00ffff'
-    white: '#FFFFFF'
-theme: Hyper
+    black: '0x666666'
+    red: '0xcd3131'
+    green: '0x14ce14'
+    yellow: '0xb5ba00'
+    blue: '0x0451a5'
+    magenta: '0xbc05bc'
+    cyan: '0x0598bc'
+    white: '0x586069'
+
+  indexed_colors:
+    - { index: 16, color: '0xd18616' }
+    - { index: 17, color: '0xcd3131' }
+theme: github_light
 
 # Shell
 #
