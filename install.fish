@@ -21,6 +21,7 @@ brew install bat
 brew install go
 brew install exa
 brew install fd
+brew install mas
 
 echo "Installing brew casks..."
 brew install --cask docker
@@ -56,7 +57,7 @@ brew install --cask mullvadvpn
 brew install --cask notion
 brew install --cask visual-studio-code
 brew install --cask things
-
+mas install 1136220934
 
 echo "Installing dotfiles..."
 git clone git@github.com:bmikaili/dotfiles.git
