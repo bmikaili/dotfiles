@@ -1,7 +1,8 @@
 /*
 /*/
-!./config
+!.config/
 !install.fish
-./.config/gcloud/
-./.config/gh*
-./.config/github-copilot/
+.config/gcloud/
+.config/gh*
+.config/github-copilot/
+.DS_Store

@@ -24,9 +24,7 @@ abbr fr source /Users/berzanmikaili/.config/fish/config.fish
 abbr tc nvim /Users/berzanmikaili/.config/tmux/tmux.conf
 abbr ta tmux attach
 abbr td tmux detach
-abbr at alacritty-themes
-abbr atl alacritty-themes github_light
-abbr atd alacritty-themes Hyper
+abbr wc nvim /Users/berzanmikaili/.config/wezterm/wezterm.lua
 abbr gp 'git push --no-verify'
 abbr bi 'brew install'
 abbr bu 'brew uninstall'
