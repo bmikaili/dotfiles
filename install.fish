@@ -22,6 +22,7 @@ brew install go
 brew install exa
 brew install fd
 brew install mas
+brew install clx
 
 echo "Installing brew casks..."
 brew install --cask docker
