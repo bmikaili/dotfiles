@@ -55,6 +55,7 @@ brew install --cask linear
 brew install --cask mullvadvpn
 brew install --cask notion
 brew install --cask visual-studio-code
+brew install --cask things
 
 
 echo "Installing dotfiles..."
