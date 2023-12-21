@@ -71,6 +71,7 @@ config.keys = {
 		mods = "CTRL",
 		action = act.ActivatePaneDirection("Down"),
 	},
+	{ key = "c", mods = "SUPER|SHIFT", action = wezterm.action.ActivateCopyMode },
 }
 
 config.front_end = "OpenGL"
