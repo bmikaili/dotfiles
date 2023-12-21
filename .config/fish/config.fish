@@ -10,9 +10,9 @@ set -x GOPATH $HOME/golibs
 # Abbreviations
 abbr vi nvim
 abbr ya yadm add
+abbr yaa yadm add .
 abbr ys yadm status
 abbr yp yadm push
-abbr yc yadm commit
 abbr ycm yadm commit -m
 abbr nkc nvim /Users/berzanmikaili/.config/nvim/lua/config/keymaps.lua
 abbr nkp cd /Users/berzanmikaili/.config/nvim/lua/plugins/
@@ -42,6 +42,7 @@ abbr j z
 abbr '??' 'gh copilot explain'
 abbr '!!' 'gh copilot suggest'
 abbr cat bat
+abbr find fd
 
 fish_add_path $GOROOT/bin
 fish_add_path $GOPATH/bin
