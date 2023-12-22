@@ -41,6 +41,7 @@ abbr '??' 'gh copilot explain'
 abbr '!!' 'gh copilot suggest'
 abbr cat bat
 abbr find fd
+abbr pn pnpm
 
 fish_add_path $GOROOT/bin
 fish_add_path $GOPATH/bin
