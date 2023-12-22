@@ -1,5 +1,6 @@
 #!/usr/bin/env fish
 echo "Installing utils..."
+xcode-select --install
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 echo "Installing brew packages..."
@@ -69,6 +70,10 @@ chsh -s /opt/homebrew/bin/fish
 fish_add_path /opt/homebrew/bin
 set -U fish_user_paths /opt/homebrew/bin $fish_user_paths
 fisher install
+
+echo "Setup Xcode"
+git clone https://github.com/SolaWing/xcode-build-server.git
+sudo ln -s ~/xcode-build-server /usr/local/bin
 
 echo "Setup macos..."
 # Sets reasonable macOS defaults.
