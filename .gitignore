@@ -4,5 +4,5 @@
 !install.fish
 .config/gcloud/
 .config/gh*
-.config/github-copilot/
+.config/github-copilot/*
 .DS_Store
