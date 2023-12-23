@@ -24,6 +24,9 @@ brew install exa
 brew install fd
 brew install mas
 brew install clx
+brew install 1password
+brew install 1password-cli
+brew install sox
 
 echo "Installing brew casks..."
 brew install --cask docker
