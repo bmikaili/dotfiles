@@ -10,6 +10,7 @@ set -x GOPATH $HOME/golibs
 # Abbreviations
 abbr vi nvim
 abbr ya yadm add
+abbr yd yadm diff
 abbr yaa yadm add .
 abbr ys yadm status
 abbr yp yadm push
