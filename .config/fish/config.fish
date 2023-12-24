@@ -15,7 +15,8 @@ abbr yaa yadm add .
 abbr ys yadm status
 abbr yp yadm push
 abbr ycm yadm commit -m
-abbr nkc nvim /Users/berzanmikaili/.config/nvim/lua/config/keymaps.lua
+abbr nkk nvim /Users/berzanmikaili/.config/nvim/lua/config/keymaps.lua
+abbr nkc nvim /Users/berzanmikaili/.config/nvim/lua/config/lazy.lua
 abbr nkp cd /Users/berzanmikaili/.config/nvim/lua/plugins/
 abbr ac nvim /Users/berzanmikaili/.config/alacritty/alacritty.yml
 abbr yc nvim /Users/berzanmikaili/.config/yabai/yabairc
