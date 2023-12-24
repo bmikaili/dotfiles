@@ -9,6 +9,7 @@ local function update_lualine_theme(mode)
     },
   })
 end
+
 return {
   {
     "f-person/auto-dark-mode.nvim",
@@ -17,16 +18,25 @@ return {
       auto_dark_mode.setup({
         update_interval = 1000,
         set_dark_mode = function()
-          vim.api.nvim_set_option("background", "dark")
+          -- Set LazyVim colorscheme to GitHub Dark
+          vim.g.lazyvim_colorscheme = "github_dark_high_contrast"
           vim.cmd("colorscheme github_dark_high_contrast")
           update_lualine_theme("dark")
         end,
         set_light_mode = function()
-          vim.api.nvim_set_option("background", "light")
+          -- Set LazyVim colorscheme to GitHub Light
+          vim.g.lazyvim_colorscheme = "github_light_high_contrast"
           vim.cmd("colorscheme github_light_high_contrast")
           update_lualine_theme("light")
         end,
       })
     end,
+  },
+  {
+    "LazyVim/LazyVim",
+    opts = {
+      -- This will get updated by the auto-dark-mode plugin
+      colorscheme = vim.g.lazyvim_colorscheme or "default",
+    },
   },
 }
