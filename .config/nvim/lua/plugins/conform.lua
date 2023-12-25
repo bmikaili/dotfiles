@@ -100,7 +100,7 @@ return {
         formatters = {
           swiftformat_ext = {
             command = "swiftformat",
-            args = function()
+            args = function(self)
               return {
                 "--config",
                 find_config() or "~/.config/nvim/.swiftformat", -- update fallback path if needed
@@ -108,7 +108,7 @@ return {
                 "$FILENAME",
               }
             end,
-            range_args = function(ctx)
+            range_args = function(self, ctx)
               return {
                 "--config",
                 find_config() or "~/.config/nvim/.swiftformat", -- update fallback path if needed
@@ -117,11 +117,10 @@ return {
               }
             end,
             stdin = true,
-            condition = function(ctx)
+            condition = function(self, ctx)
               return vim.fs.basename(ctx.filename) ~= "README.md"
             end,
             -- ignore warnings
-            options = { ignore_errors = true },
           },
           injected = { options = { ignore_errors = true } },
           -- # Example of using dprint only when a dprint.json file is present
