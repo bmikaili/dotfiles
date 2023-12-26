@@ -23,9 +23,6 @@ abbr yc nvim /Users/berzanmikaili/.config/yabai/yabairc
 abbr sc nvim /Users/berzanmikaili/.config/skhd/skhdrc
 abbr fc nvim /Users/berzanmikaili/.config/fish/config.fish
 abbr fr source /Users/berzanmikaili/.config/fish/config.fish
-abbr tc nvim /Users/berzanmikaili/.config/tmux/tmux.conf
-abbr ta tmux attach
-abbr td tmux detach
 abbr wc nvim /Users/berzanmikaili/.config/wezterm/wezterm.lua
 abbr gp 'git push --no-verify'
 abbr bi 'brew install'
@@ -44,10 +41,14 @@ abbr '!!' 'gh copilot suggest'
 abbr cat bat
 abbr find fd
 abbr pn pnpm
+abbr so open /Applications/XCode.app/Contents/Developer/Applications/Simulator.app
+abbr sk 'killall "Simulator"'
+
 
 fish_add_path $GOROOT/bin
 fish_add_path $GOPATH/bin
 fish_add_path /opt/homebrew/opt/llvm/bin
+fish_add_path /Library/TeX/texbin/latexmk
 set -Ux LDFLAGS -L/opt/homebrew/opt/llvm/lib
 set -Ux CPPFLAGS -I/opt/homebrew/opt/llvm/include
 
