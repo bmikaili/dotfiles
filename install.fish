@@ -3,6 +3,9 @@ echo "Installing utils..."
 xcode-select --install
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
+echo "Install Rust..."
+curl https://sh.rustup.rs -sSf | sh -s -- -y
+
 echo "Installing brew packages..."
 brew install fish
 brew install fisher
@@ -27,6 +30,11 @@ brew install clx
 brew install 1password
 brew install 1password-cli
 brew install sox
+brew install atuin
+brew install git-delta
+brew install xh
+brew install sd
+
 
 echo "Installing brew casks..."
 brew install --cask docker

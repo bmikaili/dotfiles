@@ -2,6 +2,7 @@ fish_vi_key_bindings
 
 #Pyenv
 pyenv init - | source
+atuin init fish | source
 
 # Golang
 set -x GOROOT /usr/local/go
@@ -26,6 +27,7 @@ abbr fc nvim /Users/berzanmikaili/.config/fish/config.fish
 abbr if nvim /Users/berzanmikaili/install.fish
 abbr fr source /Users/berzanmikaili/.config/fish/config.fish
 abbr wc nvim /Users/berzanmikaili/.config/wezterm/wezterm.lua
+abbr curl xh
 abbr gp 'git push --no-verify'
 abbr bi 'brew install'
 abbr bu 'brew uninstall'

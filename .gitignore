@@ -2,6 +2,7 @@
 /*/
 !.config/
 !install.fish
+!.gitconfig
 .config/gcloud/
 .config/gh*
 .config/github-copilot/*
