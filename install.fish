@@ -62,6 +62,9 @@ brew install --cask mullvadvpn
 brew install --cask notion
 brew install --cask visual-studio-code
 brew install --cask things
+
+echo "Installing App Store apps..."
+mas install 1464477788
 mas install 1136220934
 
 echo "Installing dotfiles..."

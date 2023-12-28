@@ -17,11 +17,13 @@ abbr yp yadm push
 abbr ycm yadm commit -m
 abbr nkk nvim /Users/berzanmikaili/.config/nvim/lua/config/keymaps.lua
 abbr nkc nvim /Users/berzanmikaili/.config/nvim/lua/config/lazy.lua
+abbr nko nvim /Users/berzanmikaili/.config/nvim/lua/config/options.lua
 abbr nkp cd /Users/berzanmikaili/.config/nvim/lua/plugins/
 abbr ac nvim /Users/berzanmikaili/.config/alacritty/alacritty.yml
 abbr yc nvim /Users/berzanmikaili/.config/yabai/yabairc
 abbr sc nvim /Users/berzanmikaili/.config/skhd/skhdrc
 abbr fc nvim /Users/berzanmikaili/.config/fish/config.fish
+abbr if nvim /Users/berzanmikaili/install.fish
 abbr fr source /Users/berzanmikaili/.config/fish/config.fish
 abbr wc nvim /Users/berzanmikaili/.config/wezterm/wezterm.lua
 abbr gp 'git push --no-verify'
