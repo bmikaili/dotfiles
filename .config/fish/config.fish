@@ -53,6 +53,7 @@ fish_add_path $GOROOT/bin
 fish_add_path $GOPATH/bin
 fish_add_path /opt/homebrew/opt/llvm/bin
 fish_add_path /Library/TeX/texbin/latexmk
+fish_add_path /opt/homebrew/bin/wezterm
 set -Ux LDFLAGS -L/opt/homebrew/opt/llvm/lib
 set -Ux CPPFLAGS -I/opt/homebrew/opt/llvm/include
 
