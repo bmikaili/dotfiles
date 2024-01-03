@@ -35,7 +35,6 @@ brew install git-delta
 brew install xh
 brew install sd
 
-
 echo "Installing brew casks..."
 brew install --cask docker
 brew install --cask macgpt

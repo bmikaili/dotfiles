@@ -47,6 +47,8 @@ abbr find fd
 abbr pn pnpm
 abbr so open /Applications/XCode.app/Contents/Developer/Applications/Simulator.app
 abbr sk 'killall "Simulator"'
+abbr icloud '~/Library/Mobile\ Documents/com~apple~CloudDocs'
+
 
 
 fish_add_path $GOROOT/bin
