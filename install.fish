@@ -47,7 +47,6 @@ brew install --cask font-sf-mono-nerd-font-ligaturized
 brew install --cask figma
 brew install --cask google-cloud-sdk
 brew install --cask keyboardcleantool
-brew install --cask kindavim
 brew install --cask loom
 brew install --cask polypane
 brew install --cask ngrok
