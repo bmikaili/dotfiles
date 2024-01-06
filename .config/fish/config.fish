@@ -11,7 +11,7 @@ set -x GOPATH $HOME/golibs
 # Abbreviations
 abbr vi nvim
 abbr ya yadm add
-abbr yd yadm diff
+abbr yd "yadm diff -- . ':!*fish_variables' ':!*lazy-lock.json' ':!*raycast*'"
 abbr yaa yadm add .
 abbr ys yadm status
 abbr yp yadm push
