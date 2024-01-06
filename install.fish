@@ -68,10 +68,11 @@ brew install --cask mullvadvpn
 brew install --cask notion
 brew install --cask visual-studio-code
 brew install --cask things
+brew install --cask mullvadvpn
 
 echo "Installing App Store apps..."
-mas install 1464477788
-mas install 1136220934
+mas install 1136220934 # Infuse
+mas install 1423210932 # Flow pomodoro
 
 echo "Installing dotfiles..."
 git clone git@github.com:bmikaili/dotfiles.git
