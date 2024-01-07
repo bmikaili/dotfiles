@@ -41,7 +41,6 @@ brew install --cask macgpt
 brew install --cask arc
 brew install --cask discord
 brew install --cask bartender
-brew install --cask beeper
 brew install --cask daisydisk
 brew install --cask font-sf-mono-nerd-font-ligaturized
 brew install --cask figma
