@@ -71,7 +71,6 @@ brew install --cask mullvadvpn
 
 echo "Installing App Store apps..."
 mas install 1136220934 # Infuse
-mas install 1423210932 # Flow pomodoro
 
 echo "Installing dotfiles..."
 git clone git@github.com:bmikaili/dotfiles.git
