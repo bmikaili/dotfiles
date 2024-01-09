@@ -10,6 +10,7 @@ set -x GOPATH $HOME/golibs
 
 # Abbreviations
 abbr vi nvim
+abbr gp git push
 abbr ya yadm add
 abbr yd "yadm diff -- . ':!*fish_variables' ':!*lazy-lock.json' ':!*raycast*'"
 abbr yaa yadm add .
@@ -28,7 +29,6 @@ abbr if nvim /Users/berzanmikaili/install.fish
 abbr fr source /Users/berzanmikaili/.config/fish/config.fish
 abbr wc nvim /Users/berzanmikaili/.config/wezterm/wezterm.lua
 abbr curl xh
-abbr gp 'git push --no-verify'
 abbr bi 'brew install'
 abbr bu 'brew uninstall'
 abbr bup 'brew update && brew upgrade'
@@ -48,7 +48,6 @@ abbr pn pnpm
 abbr so open /Applications/XCode.app/Contents/Developer/Applications/Simulator.app
 abbr sk 'killall "Simulator"'
 abbr icloud '~/Library/Mobile\ Documents/com~apple~CloudDocs'
-
 
 
 fish_add_path $GOROOT/bin
