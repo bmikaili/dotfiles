@@ -1,4 +1,4 @@
-#!/usr/bin/env fish
+#!/bin/bash
 echo "Installing utils..."
 xcode-select --install
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
