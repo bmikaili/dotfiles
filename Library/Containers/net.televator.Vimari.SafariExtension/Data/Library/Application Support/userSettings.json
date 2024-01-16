@@ -2,7 +2,7 @@
   "excludedUrls": "",
   "linkHintCharacters": "asdfjklqwerzxc",
   "detectByCursorStyle": false,
-  "scrollSize": 200,
+  "scrollSize": 100,
   "openTabUrl": "https://google.com/",
   "modifier": "",
   "smoothScroll": true,
