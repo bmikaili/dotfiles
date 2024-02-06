@@ -34,6 +34,9 @@ brew install atuin
 brew install git-delta
 brew install xh
 brew install sd
+brew install ghostscript
+brew install qpdf
+brew install vldmrkl/formulae/airdrop-cli
 
 echo "Installing brew casks..."
 brew install --cask docker

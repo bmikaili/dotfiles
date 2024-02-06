@@ -25,7 +25,7 @@ abbr ac nvim /Users/berzanmikaili/.config/alacritty/alacritty.yml
 abbr yc nvim /Users/berzanmikaili/.config/yabai/yabairc
 abbr sc nvim /Users/berzanmikaili/.config/skhd/skhdrc
 abbr fc nvim /Users/berzanmikaili/.config/fish/config.fish
-abbr if nvim /Users/berzanmikaili/install.fish
+abbr ish nvim /Users/berzanmikaili/install.sh
 abbr fr source /Users/berzanmikaili/.config/fish/config.fish
 abbr wc nvim /Users/berzanmikaili/.config/wezterm/wezterm.lua
 abbr curl xh
@@ -48,6 +48,7 @@ abbr pn pnpm
 abbr so open /Applications/XCode.app/Contents/Developer/Applications/Simulator.app
 abbr sk 'killall "Simulator"'
 abbr icloud '~/Library/Mobile\ Documents/com~apple~CloudDocs'
+abbr ai aider
 
 
 fish_add_path $GOROOT/bin
