@@ -71,6 +71,7 @@ brew install --cask notion
 brew install --cask visual-studio-code
 brew install --cask things
 brew install --cask mullvadvpn
+brew install --cask itsycal
 
 echo "Installing App Store apps..."
 mas install 1136220934 # Infuse
