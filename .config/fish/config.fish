@@ -49,6 +49,8 @@ abbr so open /Applications/XCode.app/Contents/Developer/Applications/Simulator.a
 abbr sk 'killall "Simulator"'
 abbr icloud '~/Library/Mobile\ Documents/com~apple~CloudDocs'
 abbr ai aider
+abbr java-21 'set -gx JAVA_HOME (/usr/libexec/java_home -v 21)'
+abbr java-17 'set -gx JAVA_HOME (/usr/libexec/java_home -v 17)'
 
 
 fish_add_path $GOROOT/bin
