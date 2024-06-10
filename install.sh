@@ -2,6 +2,8 @@
 echo "Installing utils..."
 xcode-select --install
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+(echo; echo 'eval "$(/opt/homebrew/bin/brew shellenv)"') >> /Users/bmikaili/.zprofile
+eval "$(/opt/homebrew/bin/brew shellenv)"
 
 echo "Install Rust..."
 curl https://sh.rustup.rs -sSf | sh -s -- -y
@@ -18,12 +20,12 @@ brew install pyenv
 brew install nvm
 brew install node
 brew install neovim
-brew install skhd
-brew install yabai
+brew install koekeishiya/formulae/skhd
+brew install koekeishiya/formulae/yabai
 brew install xcodegen
 brew install bat
 brew install go
-brew install exa
+brew install eza
 brew install fd
 brew install mas
 brew install clx
@@ -51,6 +53,7 @@ brew install --cask google-cloud-sdk
 brew install --cask keyboardcleantool
 brew install --cask loom
 brew install --cask polypane
+brew install --cask wezterm
 brew install --cask ngrok
 brew install --cask rapidapi
 brew install --cask raycast
