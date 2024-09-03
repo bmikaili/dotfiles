@@ -2,7 +2,10 @@
 echo "Installing utils..."
 xcode-select --install
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-(echo; echo 'eval "$(/opt/homebrew/bin/brew shellenv)"') >> /Users/bmikaili/.zprofile
+(
+  echo
+  echo 'eval "$(/opt/homebrew/bin/brew shellenv)"'
+) >>/Users/bmikaili/.zprofile
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
 echo "Install Rust..."
@@ -39,6 +42,8 @@ brew install sd
 brew install ghostscript
 brew install qpdf
 brew install vldmrkl/formulae/airdrop-cli
+brew tap FelixKratz/formulae
+brew install borders
 
 echo "Installing brew casks..."
 brew install --cask docker
