@@ -75,7 +75,6 @@ brew install --cask iina
 brew install --cask flux
 brew install --cask google-chrome
 brew install --cask linear
-brew install --cask mullvadvpn
 brew install --cask notion
 brew install --cask visual-studio-code
 brew install --cask things
