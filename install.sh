@@ -44,6 +44,7 @@ brew install qpdf
 brew install vldmrkl/formulae/airdrop-cli
 brew tap FelixKratz/formulae
 brew install borders
+brew install zoxide
 
 echo "Installing brew casks..."
 brew install --cask docker
