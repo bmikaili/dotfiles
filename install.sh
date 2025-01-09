@@ -23,8 +23,6 @@ brew install pyenv
 brew install nvm
 brew install node
 brew install neovim
-brew install koekeishiya/formulae/skhd
-brew install koekeishiya/formulae/yabai
 brew install xcodegen
 brew install bat
 brew install go
@@ -43,7 +41,7 @@ brew install ghostscript
 brew install qpdf
 brew install vldmrkl/formulae/airdrop-cli
 brew tap FelixKratz/formulae
-brew install borders
+brew install svim
 brew install zoxide
 
 echo "Installing brew casks..."
@@ -80,6 +78,7 @@ brew install --cask visual-studio-code
 brew install --cask things
 brew install --cask mullvadvpn
 brew install --cask itsycal
+brew install --cask nikitabobko/tap/aerospace
 
 echo "Installing App Store apps..."
 mas install 1136220934 # Infuse
