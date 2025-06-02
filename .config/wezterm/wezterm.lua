@@ -16,7 +16,7 @@ local function apply_tab_bar_colors(appearance)
 	if appearance:find("Dark") then
 		return "Github Dark"
 	else
-		return "Github"
+		return "Github (base16)"
 	end
 end
 
@@ -70,7 +70,7 @@ local function split_nav(resize_or_move, key)
 end
 
 config.font = wezterm.font({ family = "Liga SFMono Nerd Font", weight = "Bold" })
-config.font_size = 14
+config.font_size = 13
 config.window_decorations = "RESIZE"
 config.use_fancy_tab_bar = false
 
