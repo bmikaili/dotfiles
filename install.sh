@@ -46,7 +46,6 @@ brew install zoxide
 
 echo "Installing brew casks..."
 brew install --cask docker
-brew install --cask macgpt
 brew install --cask arc
 brew install --cask discord
 brew install --cask bartender
@@ -56,32 +55,32 @@ brew install --cask figma
 brew install --cask google-cloud-sdk
 brew install --cask keyboardcleantool
 brew install --cask loom
-brew install --cask polypane
 brew install --cask wezterm
-brew install --cask ngrok
 brew install --cask rapidapi
 brew install --cask raycast
 brew install --cask sf-symbols
-brew install --cask reflect
 brew install --cask spaceid
 brew install --cask zoom
 brew install --cask cleanshot
-brew install --cask craft
 brew install --cask slack
-brew install --cask dash
 brew install --cask iina
 brew install --cask flux
 brew install --cask google-chrome
 brew install --cask linear
-brew install --cask notion
 brew install --cask visual-studio-code
 brew install --cask things
 brew install --cask mullvadvpn
 brew install --cask itsycal
 brew install --cask nikitabobko/tap/aerospace
+brew install --cask homerow
+brew install --cask meetingbar
+brew install --cask lookaway
+brew install --cask hyperkey
+brew install --cask cursor
 
 echo "Installing App Store apps..."
 mas install 1136220934 # Infuse
+mas install 1091189122 # Bear
 
 echo "Installing dotfiles..."
 git clone git@github.com:bmikaili/dotfiles.git
