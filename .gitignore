@@ -4,3 +4,4 @@
 # Chezmoi working files
 .chezmoi.toml
 
+dot_config/private_op/

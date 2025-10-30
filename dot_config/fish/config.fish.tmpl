@@ -65,7 +65,7 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 source ~/.awscredentials
 
 set -x SFCLI_OP_ACCOUNT snowflake.1password.com
-set -x JIRA_API_TOKEN ATATT3xFfGF0Cdq-wIRMuf-tNqazZnayUIQGJ63Vq-sxD0NkmEU1SQUbidL-LlbiKa0TM76sxLAc8iO1AdyXGZuBlwPope8ZgV2L7_4LL2GEF9k9kxMZPU5ShgbaERbHjVbrjmux9M66W_XzhggwdT7yvFlbT28H9_k4z_ZK2sZ0CXATtx38vB4=45A94357
+set -x JIRA_API_TOKEN {{ onepasswordRead "op://Private/JIRA_API_TOKEN/credential" | quote }}
 
 # sfid
 eval "$(sf aliases --fish-shell)"
