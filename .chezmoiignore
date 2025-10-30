@@ -1,0 +1,25 @@
+# Ignore work-specific configs on private machines
+{{ if ne .profile "work" }}
+.config/sfcli/
+.config/op/
+{{ end }}
+
+# Runtime files that should never be synced
+.config/fish/fish_variables
+.config/fish/fish_plugins
+.config/op/op-daemon.sock
+.config/github-copilot/jbc/
+.config/gcloud/logs/
+.config/gcloud/gce
+.config/gcloud/.last_survey_prompt.yaml
+
+# Auth tokens and credentials
+.config/gh/hosts.yml
+.config/atuin/key
+
+# macOS system files
+.DS_Store
+
+# Other runtime/cache files
+.config/nvim/.neoconf.json
+

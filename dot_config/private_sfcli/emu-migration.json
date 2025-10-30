@@ -1,0 +1,16 @@
+{
+    "emu_orgs": [
+        "snow-emu",
+        "snowflake-eng"
+    ],
+    "repositories": [
+        {
+            "source_repository": "snowflakedb/jenkins_automation",
+            "destination_repository": "snowflake-eng/jenkins_automation"
+        },
+        {
+            "source_repository": "snowflakedb/jenkins_release_configs",
+            "destination_repository": "snowflake-eng/jenkins_release_configs"
+        }
+    ]
+}
